@@ -1,0 +1,100 @@
+/* AttendanceApp.css */
+
+/* Animation d'apparition */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Style global */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f2f5fa;
+  margin: 0;
+  padding: 0;
+}
+
+/* Boîte principale */
+.MuiBox-root {
+  background-color: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  animation: fadeInUp 0.8s ease;
+}
+
+/* Titres */
+h4, h6, .MuiTypography-h4, .MuiTypography-h6 {
+  color: #1976d2;
+  font-weight: bold;
+  animation: fadeInUp 0.5s ease;
+}
+
+/* Webcam */
+.webcam-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+video {
+  border: 3px solid #1976d2;
+  border-radius: 12px;
+  max-width: 100%;
+  animation: fadeInUp 0.6s ease;
+}
+
+/* Boutons */
+.MuiButton-root {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.MuiButton-contained {
+  background: linear-gradient(to right, #1976d2, #2196f3);
+  color: white;
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
+}
+
+.MuiButton-contained:hover {
+  background: linear-gradient(to right, #1565c0, #1e88e5);
+  transform: scale(1.03);
+}
+
+/* Tableau */
+.MuiTableContainer-root {
+  animation: fadeInUp 0.6s ease;
+}
+
+.MuiTableRow-root:hover {
+  background-color: #e3f2fd;
+  transition: background-color 0.3s ease;
+}
+
+.MuiTableCell-root {
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+/* Alerte */
+.MuiAlert-root {
+  font-size: 16px;
+  animation: fadeInUp 0.6s ease;
+  border-radius: 8px;
+}
+
+/* Chargement (cercle) */
+.MuiCircularProgress-root {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
